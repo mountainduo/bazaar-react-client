@@ -107,7 +107,7 @@ class BazaarListingComponent extends React.Component {
                     <h4>${this.state.listing.price}</h4>
                         <p>{this.state.listing.description}</p>
                         <br/>
-                        <p>Posted: {parseDate(this.state.listing.date)}</p>
+                        <p>Posted: {parseDate(this.state.listing.date.replace(/-/g, "/"))}</p>
                         
                         {Object.keys(this.props.profile).length > 0 && Object.keys(this.state.user).length > 0 && this.state.user.id === this.props.profile.id &&
                             <div>

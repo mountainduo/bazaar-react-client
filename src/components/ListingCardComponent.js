@@ -21,7 +21,7 @@ class ListingCardComponent extends React.Component {
                         </Link>
                         <h6 class="card-subtitle text-muted">Price: {this.props.listing.price}</h6>
                     </div>
-                    <p>Posted: {parseDate(this.props.listing.date)}</p>
+                    <p>Posted: {parseDate(this.props.listing.date.replace(/-/g, "/"))}</p>
                     <br/>
                 </div>
                 </div>

@@ -34,7 +34,7 @@ export default class CraigslistPostDetailsComponent extends React.Component {
                     <div className="col">
                         <p>{this.state.listing.description}</p>
                         <br/>
-                        <p>Posted: {parseDate(this.state.listing.date)}</p>
+                        <p>Posted: {parseDate(this.state.listing.date.replace(/-/g, "/"))}</p>
                         {this.state.listing.source === 'craigslist' &&
                             <a className="btn btn-success" href={this.state.listing.listingUrl}>
                                 View Listing on Craigslist
