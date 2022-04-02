@@ -32,7 +32,7 @@ class ListingRowComponent extends React.Component {
                                 <h5>{this.props.listing.title}</h5>
                             </Link>}
 
-                            <small>Posted: {parseDate(this.props.listing.date)}</small>
+                            <small>Posted: {parseDate(this.props.listing.date.replace(/-/g, "/"))}</small>
                         </div>
                         <p className="mb-1">
                             Price: {this.props.listing.price}
