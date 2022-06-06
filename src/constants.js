@@ -1,4 +1,4 @@
-export const proxyUrl = 'https://duo-cors-proxy-1.herokuapp.com/' //'https://secret-ocean-49799.herokuapp.com/'
+export const proxyUrl = 'https://duo-proxy-server-2.herokuapp.com/' //'https://secret-ocean-49799.herokuapp.com/'
 //https://github.com/messier31/cors-proxy-server Updated Proxy Server Github reference
 export const defaultCity = 'boston'
 
