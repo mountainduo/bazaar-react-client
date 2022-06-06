@@ -9,7 +9,7 @@ export default class CraigslistPostDetailsComponent extends React.Component {
         let listingID = this.props.match.params.listingID;
         searchListings(searchCity, listingID, 1)
             .then(response => this.setState({listing: response[0]}))
-            .then(result => getListingDetails(result.listingUrl))
+            .then(result => getListingDetails(this.state.listing.listingUrl))
             .then(listingDetails => this.setState({
                 listing: {...this.state.listing, ['description']: listingDetails['description']},
                 isLoading: false,
