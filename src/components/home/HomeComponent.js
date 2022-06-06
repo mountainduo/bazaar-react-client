@@ -33,7 +33,8 @@ export default class HomeComponent extends React.Component {
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.profile !== this.props.profile) { //If BazaarContainer retrieves updated profile (example: after make update request)
             if (Object.keys(this.props.profile).length !== 0) {
-                this.getRecentListings(this.props.profile.city)
+                this.getRecentListings(this.props.profile.city);
+                this.setState({city: this.props.profile.city});
             }
             else {
                 this.getRecentListings(defaultCity)

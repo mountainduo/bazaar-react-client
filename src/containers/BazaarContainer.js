@@ -37,12 +37,13 @@ class BazaarContainer extends React.Component {
 
     retrieveSession = () =>
         profile()
-            .then(profile => this.setState({
-                profile: profile
-            }))
-            .catch(e => this.setState({
-                profile: {}
-            }))
+            .then(profile => {
+                return this.setState({profile: profile})
+            })
+            .catch(e => {
+                console.log('Bazaar encountered an Error:', e)
+                return this.setState({profile: {}});
+            })
 
     render () {
         return (
