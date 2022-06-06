@@ -1,5 +1,5 @@
 export const proxyUrl = 'https://duo-proxy-server-2.herokuapp.com/' //'https://secret-ocean-49799.herokuapp.com/'
-//https://github.com/messier31/cors-proxy-server Updated Proxy Server Github reference
+//https://github.com/TxTony/easy-cors-proxy Updated Proxy Server Github reference
 export const defaultCity = 'boston'
 
 export const API_USER_URL = "https://wbdv-sp20-bazaar-server-java.herokuapp.com/api/users"
