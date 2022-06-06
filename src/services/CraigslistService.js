@@ -4,9 +4,7 @@ import {parseCraigslistSubregionURLPrefix} from '../utils/StringUtils'
 
 export const searchListings =(location, searchQuery, limit) =>
     fetch(proxyUrl + `https://${location}.craigslist.org/search/sss?sort=rel&query=${searchQuery}`)
-        .then(response => {
-            return response.text();
-        })
+        .then(response => response.text())
         .then(resultHTML => parseListings(resultHTML, limit))
 
 export const getRecentListings =(location, limit) =>
